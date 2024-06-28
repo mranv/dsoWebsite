@@ -105,7 +105,7 @@ header img {
 }
 .grid-2 {
   --row: 8;
-  font-size: 1.7em;
+  font-size: 2em;
 }
 .grid-2 div:nth-child(1) {
   grid-column: 1 / 4;
@@ -254,6 +254,33 @@ footer .content {
   animation: autoBLurAnimation linear both;
   animation-timeline: view();
 }
+
+.autoBLur a {
+  color: black;
+  text-decoration: none;
+  position: relative;
+}
+
+.autoBLur a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 10px; /* Increased from 1px to 2px */
+  bottom: -2px; /* Adjusted to account for increased thickness */
+  left: 0;
+  background-color: black;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+}
+
+.autoBLur a:hover::after,
+.autoBLur a:focus::after,
+.autoBLur a:active::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
 @keyframes autoBLurAnimation {
   0% {
     filter: blur(40px);
