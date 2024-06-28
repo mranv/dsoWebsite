@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Odibee+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Merriweather:wght@300;400;700&family=Open+Sans:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap");
+
 html,
 body {
   scroll-behavior: smooth;
@@ -8,7 +9,7 @@ body {
   margin: 0;
   font-size: 14px;
   color: #2e373a;
-  font-family: "Libre Baskerville", sans-serif;
+  font-family: "Open Sans", "Lato", sans-serif;
 }
 * {
   padding: 0;
@@ -30,41 +31,49 @@ header {
 header img {
   height: 40px;
 }
-.banner .content {
+.banner {
   font-family: "Odibee Sans", sans-serif;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  min-height: 100vh; /* Adjust as needed */
+  background-color: #fff; /* Example background color */
 }
+
+.banner .content {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+  max-width: 1200px; /* Adjust max width as needed */
+  padding: 20px;
+  text-align: center; /* Center text horizontally */
+}
+
 .banner .content h1 {
   font-size: 17em;
+  margin: 0;
 }
+
 .banner .content .right {
-  text-align: right;
-  transform: translateY(-30px);
+  margin-top: 20px; /* Adjust spacing as needed */
 }
+
 .banner .content .right h2 {
   font-size: 7em;
   font-weight: 200;
+  margin: 0;
 }
+
 .banner .image {
   width: 100%;
+  max-width: 1200px; /* Adjust max width as needed */
   height: 600px;
-  background-image: url(images/b29528c9-2e3a-4364-850c-1e04a03505fe.png);
+  background-image: url(images/DevSecOps.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  position: relative;
 }
 
-/* .banner .image img {
-  position: absolute;
-  height: 130%;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 0px;
-} */
 .grid figure img {
   width: 100%;
 }
