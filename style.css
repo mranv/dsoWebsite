@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Merriweather:wght@300;400;700&family=Open+Sans:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css");
+
 html,
 body {
   scroll-behavior: smooth;
@@ -140,14 +143,106 @@ header img {
 .grid-3 div:nth-child(4) {
   grid-column: 1/ 7;
 }
-footer {
+
+.footer {
+  background-color: #111;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
   border-top: 1px solid #2e373a55;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
-footer .content {
-  width: min(1400px, 100vw);
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  width: min(1400px, 100%);
   margin: auto;
-  padding: 100px 20px;
+  padding: 4rem 2rem;
+}
+
+.footer-section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.footer-section h3::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 50px;
+  height: 2px;
+  background-color: #fff;
+}
+
+.footer-section p,
+.footer-section ul {
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.social-links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+}
+
+.social-links a {
+  color: #fff;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #ddd;
+}
+
+.footer-section.articles ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section.articles li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-section.articles a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section.articles a:hover {
+  color: #ddd;
+}
+
+.footer-section.image img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.footer-bottom {
+  background-color: #000;
+  text-align: center;
+  padding: 1rem;
+  margin-top: auto;
+}
+
+.footer-bottom p {
+  font-size: 0.8rem;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
 }
 .grid-5 {
   --row: 5;
